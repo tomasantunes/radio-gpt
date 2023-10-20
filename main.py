@@ -7,7 +7,32 @@ openai.api_key = ""
 
 prompts = [
     "Tell me a story with less than 50 words.",
-    "Tell me a recipe for pasta."
+    "Give me an idea for a stunt that I could do to become viral.",
+    "Give me an idea for promoting my app.",
+    "Give me a solution for poverty.",
+    "Pick a debate topic and make an argument for both sides.",
+    "Tell me a story in less than 50 words.",
+    "Give me a random tip about how to overcome a productivity block.",
+    "Tell me a random historical fact.",
+    "Tell me a random fact about computer science.",
+    "Give me a random tip about how to overcome a creative block.",
+    "Tell me a joke.",
+    "Tell me something amazing that someone did to become successful.",
+    "Tell me how to embrace acceptance and gratitude.",
+    "Tell me how to to deal with bad clients.",
+    "Give me an example of something that requires balance between two opposing views.",
+    "Tell me how to deal with mental health issues.",
+    "Give me an idea for groundbreaking research.",
+    "Tell me how to become a better leader.",
+    "Tell me how to deal with stress and pressure at work.",
+    "Tell me how to deal with boredom.",
+    "Tell me how do I become better at my job as a web developer.",
+    "Explain to me a random philosophy topic.",
+    "Tell me a random historical fact about retro computers and video-games.",
+    "Give me a random tip to manage my money better.",
+    "Tell me one of the challenges behind selling software.",
+    "Give me a reason why happiness is more important than money.",
+    "Tell me a random fact about programming design patterns."
 ]
 
 break_program = False
