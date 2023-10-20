@@ -65,7 +65,7 @@ with keyboard.Listener(on_press=on_press) as listener:
 
             engine.say(answer)
             engine.runAndWait()
-            time.sleep(1)
+            time.sleep(15)
             if break_program == True:
                 quit()
     listener.join()
