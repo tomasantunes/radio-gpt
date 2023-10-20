@@ -5,6 +5,8 @@ import time
 import random
 openai.api_key = ""
 
+system_instructions = "Keep your answer to no more than 50 words."
+
 prompts = [
     "Tell me a story with less than 50 words.",
     "Give me an idea for a stunt that I could do to become viral.",
@@ -56,6 +58,7 @@ with keyboard.Listener(on_press=on_press) as listener:
             completion = openai.ChatCompletion.create(
               model="gpt-3.5-turbo",
               messages=[
+                {"role": "system", "content": system_instructions},
                 {"role": "user", "content": prompt}
               ]
             )
