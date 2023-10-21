@@ -10,7 +10,7 @@ g4f.check_version = False
 print(g4f.version)
 print(g4f.Provider.Ails.params)
 
-system_instructions = "Keep your answer to no more than 50 words."
+system_instructions = " Keep your answer to no more than 50 words."
 
 prompts = [
     "Tell me a story with less than 50 words.",
@@ -61,10 +61,9 @@ with keyboard.Listener(on_press=on_press) as listener:
             print(prompt)
 
             response = g4f.ChatCompletion.create(
-                model=g4f.models.gpt_4,
+                model="gpt-3.5-turbo",
                 messages=[
-                  {"role": "system", "content": system_instructions},
-                  {"role": "user", "content": prompt}
+                  {"role": "user", "content": prompt + system_instructions}
                 ],
             )
 
