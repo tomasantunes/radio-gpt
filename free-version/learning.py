@@ -20,7 +20,8 @@ prompts = [
     "Come up with a random philosophy question that could come up in a test and then give me an answer and justify.",
     "Come up with a random question or exercise that could come up in a biology test and then give me an answer",
     "Come up with a random question that could could come up in an engineering quiz and then give me an answer",
-    "Explain to me a random mathematical proof"
+    "Explain to me a random mathematical proof",
+    "Explain to me a random concept of discrete math."
 ]
 
 break_program = False
