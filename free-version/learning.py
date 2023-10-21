@@ -1,9 +1,16 @@
-import openai
+# Dependency: https://github.com/xtekky/gpt4free
+import g4f
 import pyttsx3
 from pynput import keyboard
 import time
 import random
-openai.api_key = ""
+
+g4f.logging = True
+g4f.check_version = False
+print(g4f.version)
+print(g4f.Provider.Ails.params)
+
+system_instructions = ""
 
 prompts = [
     "Come up with a random math exercise and then go through the solution step by step.",
@@ -34,17 +41,16 @@ with keyboard.Listener(on_press=on_press) as listener:
             count += 1
             print(prompt)
 
-            completion = openai.ChatCompletion.create(
-              model="gpt-3.5-turbo",
-              messages=[
-                {"role": "user", "content": prompt}
-              ]
+            response = g4f.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                  {"role": "user", "content": prompt + system_instructions}
+                ],
             )
 
-            answer = completion.choices[0].message.content
-            print(answer)
+            print(response)
 
-            engine.say(answer)
+            engine.say(response)
             engine.runAndWait()
             time.sleep(15)
             if break_program == True:
