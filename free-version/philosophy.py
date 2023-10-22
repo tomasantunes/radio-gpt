@@ -154,7 +154,10 @@ prompts = [
     "I Think, Therefore I Am",
     "Samsara",
     "Platonism",
-    "Sense Data"
+    "Sense Data",
+    "Stoicism",
+    "Consequentialism",
+    "Deontology"
 ]
 break_program = False
 def on_press(key):
