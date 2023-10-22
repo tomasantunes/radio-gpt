@@ -15,7 +15,8 @@ def remove_urls (vTEXT):
     vTEXT = re.sub(r'(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b', '', vTEXT, flags=re.MULTILINE)
     return(vTEXT)
 
-instructions = "Tell me everything you know about the following topic: "
+instructions = "Tell me everything you know about the following topic. "
+instructions_after = "Include explanation of sub-topics and examples."
 
 prompts = [
     "The nature of reality",
@@ -176,7 +177,7 @@ with keyboard.Listener(on_press=on_press) as listener:
             response = g4f.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                  {"role": "user", "content": instructions + prompt}
+                  {"role": "user", "content": instructions + prompt + instructions_after}
                 ],
             )
 
