@@ -4,11 +4,16 @@ import pyttsx3
 from pynput import keyboard
 import time
 import random
+import re
 
 g4f.logging = True
 g4f.check_version = False
 print(g4f.version)
 print(g4f.Provider.Ails.params)
+
+def remove_urls (vTEXT):
+    vTEXT = re.sub(r'(https|http)?:\/\/(\w|\.|\/|\?|\=|\&|\%)*\b', '', vTEXT, flags=re.MULTILINE)
+    return(vTEXT)
 
 instructions = """Role: 
 Use the "Tree of Thoughts" approach to act as a guide to systematically address logic-based issues.
@@ -107,6 +112,8 @@ with keyboard.Listener(on_press=on_press) as listener:
                   {"role": "user", "content": instructions + prompt}
                 ],
             )
+
+            response = remove_urls(response)
 
             print(response)
 
