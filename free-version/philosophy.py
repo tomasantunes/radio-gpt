@@ -16,7 +16,7 @@ def remove_urls (vTEXT):
     return(vTEXT)
 
 instructions = "Tell me everything you know about the following topic. "
-instructions_after = "Include explanation of sub-topics and examples."
+instructions_after = "Include explanations of sub-topics and examples."
 
 prompts = [
     "The nature of reality",
