@@ -315,6 +315,8 @@ with keyboard.Listener(on_press=on_press) as listener:
             )
 
             response = remove_urls(response)
+            response = response.replace("*", "")
+            response = response.replace("#", "")
 
             print(response)
 
